@@ -1,1 +1,14 @@
 C:\VsFolder\Projects\ShipBattleTraining\ShipBattleTraining\bin\Debug\ShipBattleTraining.exe.config
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\bin\Debug\ShipBattleTraining.exe.config
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\bin\Debug\ShipBattleTraining.exe
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\bin\Debug\ShipBattleTraining.pdb
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\ShipBattleTraining.csprojResolveAssemblyReference.cache
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\MainWindow.baml
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\MainWindow.g.cs
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\App.g.cs
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\ShipBattleTraining_MarkupCompile.cache
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\ShipBattleTraining.g.resources
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\ShipBattleTraining.Properties.Resources.resources
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\ShipBattleTraining.csproj.GenerateResource.Cache
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\ShipBattleTraining.exe
+C:\Users\strikaur\Source\Repos\Pamokos\2_pamoka_10_11\ShipBattle\ShipBattleTraining\obj\Debug\ShipBattleTraining.pdb

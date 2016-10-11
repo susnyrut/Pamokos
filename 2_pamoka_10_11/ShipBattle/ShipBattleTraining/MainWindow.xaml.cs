@@ -179,7 +179,9 @@ namespace ShipBattleTraining
                         }
                     }).ToArray())
                     .ToArray();
-                var target = Functions.SelectShotCoordinates(grid);
+                var target = Functions.SelectShotCoordinates(grid, shotsList.ToArray());
+
+                shotsList.Add(target);
 
                 shotsCounter++;
                 txtShotsCounter.Text = shotsCounter.ToString();
@@ -325,6 +327,7 @@ namespace ShipBattleTraining
                 }
             }
 
+            shotsList = new List<ShotTarget>();
             battleField = new List<List<BattlefieldCell>>();
 
             for (int i = 0; i < battleFieldWidth; i++)
