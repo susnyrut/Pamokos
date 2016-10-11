@@ -1,0 +1,117 @@
+﻿<Window x:Class="ShipBattleTraining.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow">
+    <Viewbox>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <CheckBox Grid.Row="0" Name="chkAutoFire" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Auto-fire" Checked="chkAutoFire_Checked" Unchecked="chkAutoFire_Checked" />
+            <Button Grid.Row="0" HorizontalAlignment="Center" Content="Shoot!" Margin="10" Padding="5" Click="btnShoot_Click" Cursor="Hand">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="IsEnabled" Value="True" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsChecked, ElementName=chkAutoFire}" Value="True">
+                                <Setter Property="IsEnabled" Value="False" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Grid.Row="0" HorizontalAlignment="Right" Content="Reset" Margin="10" Padding="5" Click="btnReset_Click" Cursor="Hand" />
+
+            <ItemsControl Grid.Row="1" Name="itmcBattleField">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <ItemsControl ItemsSource="{Binding}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Width="51" Height="51" BorderThickness="1" BorderBrush="Gray" Background="LightGray">
+                                        <Grid>
+                                            <Polygon Stroke="Black" StrokeThickness="1" Fill="Brown">
+                                                <Polygon.Style>
+                                                    <Style TargetType="Polygon">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding PlacedShip.Ship.Sunken}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding PlacedShip.SectionDrawing}" Value="BackHorizontal">
+                                                                <Setter Property="Points" Value="10,10,50,10,50,40,10,40" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding PlacedShip.SectionDrawing}" Value="MiddleHorizontal">
+                                                                <Setter Property="Points" Value="0,10,50,10,50,40,0,40" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding PlacedShip.SectionDrawing}" Value="FrontHorizontal">
+                                                                <Setter Property="Points" Value="0,10,10,10,40,25,10,40,0,40" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding PlacedShip.SectionDrawing}" Value="BackVertical">
+                                                                <Setter Property="Points" Value="10,50,10,10,40,10,40,50" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding PlacedShip.SectionDrawing}" Value="MiddleVertical">
+                                                                <Setter Property="Points" Value="10,50,10,0,40,0,40,50" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding PlacedShip.SectionDrawing}" Value="FrontVertical">
+                                                                <Setter Property="Points" Value="10,0,40,0,40,10,25,40,10,10" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding PlacedShip.SectionDrawing}" Value="WholeShip">
+                                                                <Setter Property="Points" Value="5,15,30,15,45,25,30,35,5,35" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Polygon.Style>
+                                            </Polygon>
+                                            <Border Width="10" Height="10" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Black">
+                                                <Border.Style>
+                                                    <Style TargetType="Border">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding HasBeenFiredAt}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Border.Style>
+                                            </Border>
+                                            <Image Stretch="UniformToFill" Source="fire.png" Opacity="0.7">
+                                                <Image.Style>
+                                                    <Style TargetType="Image">
+                                                        <Setter Property="Visibility" Value="Visible" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding PlacedShip}" Value="{x:Null}">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding HasBeenFiredAt}" Value="False">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Image.Style>
+                                            </Image>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <TextBlock Text="Shots fired:" Margin="0,0,5,0" />
+                <TextBlock Name="txtShotsCounter" />
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</Window>
