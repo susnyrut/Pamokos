@@ -1,0 +1,12 @@
+﻿Baidarių sportas, 0, 1, 1	
+Šiuolaikinė penkiakovė, 1, 2, 1
+Dviračių sportas, 0, 0, 1	
+Sunkioji atletika, 0, 0, 1	
+Plaukimas, 1, 0, 0	
+Šaudymas, 1, 0, 0	
+Akademinis irklavimas, 0, 1, 2	
+Buriavimas, 0, 1, 0	
+Krepšinis, 0, 0, 3	
+Lengvoji atletika, 3, 1, 1
+Imtynės, 0, 0, 2	
+Boksas, 0, 0, 1	
