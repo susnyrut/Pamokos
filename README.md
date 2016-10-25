@@ -5,7 +5,7 @@
 1. [Įvadas į VisualStudio ir Git](https://docs.google.com/document/d/17sCoJ_q7hug0CnU3JmXz1xrvj28EAWvarSUXQAWvYCc/edit?usp=sharing) - [Katalogas](https://github.com/susnyrut/Pamokos/tree/master/1_pamoka_10_04)
 2. [C# įvadas] (https://github.com/susnyrut/Pamokos/blob/master/2_pamoka_10_11/2pamoka_bendras.pdf) - [How to fork a repository](https://github.com/susnyrut/Pamokos/blob/master/2_pamoka_10_11/Howtoforkrepository.pdf) - [Praktinė užduotis] (https://github.com/susnyrut/Pamokos/tree/master/2_pamoka_10_11/ShipBattle)
 3. [Standartinės įvesties ir išvesties komandos konsolėje ir debuginimas] (https://docs.google.com/document/d/1ncACxtzl-Mx1A2MfzPoWD6Z6MkWuJAkmk0khbPo1gbE)
-3. [Skaitymas iš failo ir rašymas į failą] (https://github.com/susnyrut/Pamokos/blob/master/4_pamoka_10_25/4pamoka.pdf)
+4. [Skaitymas iš failo ir rašymas į failą] (https://github.com/susnyrut/Pamokos/blob/master/4_pamoka_10_25/4pamoka.pdf)
 
 ### Programinė įranga
 
