@@ -1,0 +1,5 @@
+Hello ~ Hi there!
+Bye ~ Good bye my friend!
+How are you ~ I am fine and you?
+I am good ~ I am glad!
+What is your name ~ My name is Chatty, super cool chat bot written by you :)
