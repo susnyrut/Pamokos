@@ -7,7 +7,7 @@
 3. [Standartinės įvesties ir išvesties komandos konsolėje ir debuginimas] (https://docs.google.com/document/d/1ncACxtzl-Mx1A2MfzPoWD6Z6MkWuJAkmk0khbPo1gbE)
 4. [Skaitymas iš failo ir rašymas į failą ] (https://github.com/susnyrut/Pamokos/blob/master/4_pamoka_10_25/4pamoka.pdf)
 5. [Dictionary duomenų tipas ] (https://github.com/susnyrut/Pamokos/blob/master/5_pamoka_11_08/5pamoka.pdf)
-6. [Objektinis programavimas]
+6. [Objektinis programavimas] (https://github.com/susnyrut/Pamokos/blob/master/6_pamoka_11_15/Klases.pdf)
 
 ### Programinė įranga
 
