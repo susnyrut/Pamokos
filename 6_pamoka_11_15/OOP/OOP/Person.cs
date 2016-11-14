@@ -17,6 +17,27 @@ namespace OOP
         //klasės viduje. Lauko reikšmės negalėsi pakeisti tiesiogiai
         private int age = 0;
 
+        //static reiškia, kad jei sukursi du Person objektus
+        //ir vienam pakeisti weight reiškmę,
+        //ji pasikeis ir kitam, t.y.
+        //objektai naudosis tuo pačiu field'u
+        public static string secret = "123";
+
+        //cia yra du konstruktoriai
+        //tai specialios struktūros, kurių pagalba
+        //galim greitai sukurti objektą
+        public Person()
+        {
+            
+        }
+
+        public Person(string _name, int _age, string _favouriteMeal)
+        {
+            name = _name;
+            age = _age;
+            FavoriteMeal = _favouriteMeal;
+        }
+
         //Name ir Age yra properties
         //Jie gali keisti fields reikšmes
         public string Name
