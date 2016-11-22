@@ -23,7 +23,7 @@ namespace ChatClientConsole
             Console.Write("Iveskite prisijungimo slaptazodi: ");
             userPass = Console.ReadLine().Trim();
 
-            if (true/* cia turi buti kodas kuris patikrintu ar prisijungimas pavyko */)
+            if (true/* cia turi buti kodas kuris darytu prisijungima */)
             {
                 ConsoleKeyInfo userMenuInput = new ConsoleKeyInfo();
 
@@ -37,9 +37,14 @@ namespace ChatClientConsole
 
                         InputMessage(out messageRecipient, out messageText);
 
-                        /* cia turi buti kodas kuris siustu zinute */
-
-                        OutputMessageSent();
+                        if (true/* cia turi buti kodas kuris siustu zinute */)
+                        {
+                            OutputMessageSent();
+                        }
+                        else
+                        {
+                            OutputMessageNotSent();
+                        }
                     }
                     else if (userMenuInput.KeyChar == '2')
                     {
@@ -102,6 +107,12 @@ namespace ChatClientConsole
         {
             Console.WriteLine();
             Console.WriteLine("Zinute nusiusta!");
+        }
+
+        static void OutputMessageNotSent()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Zinute nusiusti nepavyko!");
         }
 
         static void OutputSenders(string[] senders)
