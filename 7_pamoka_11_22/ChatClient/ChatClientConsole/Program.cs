@@ -2,6 +2,7 @@
 using Chat.Model;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace ChatClientConsole
 {
@@ -9,18 +10,22 @@ namespace ChatClientConsole
     {
         static void Main(string[] args)
         {
-            /*ChatClient client = new ChatClient();
-
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
+            /*
+            // Kliento panaudojimo pavyzdys
+            ChatClient client = new ChatClient();
             client.Register("", "");
             client.SendMessage("", "");
-            List<Message> messages = client.GetAllMessages(20);*/
+            List<Message> messages = client.GetAllMessages(20);
+            */
 
             string userName, userPass;
 
-            Console.Write("Iveskite prisijungimo varda: ");
+            Console.Write("Įveskite prisijungimo vardą: ");
             userName = Console.ReadLine().Trim();
 
-            Console.Write("Iveskite prisijungimo slaptazodi: ");
+            Console.Write("Įveskite prisijungimo slaptažodį: ");
             userPass = Console.ReadLine().Trim();
 
             if (true/* cia turi buti kodas kuris darytu prisijungima */)
@@ -59,7 +64,7 @@ namespace ChatClientConsole
 
                         InputSender(out sender);
 
-                        messages = new string[] { "zinutes nr. 1", "antra zinute", "zinute paskutine" }; /* cia turi buti kodas kuris uzpildytu zinuciu sarasa */
+                        messages = new string[] { "Žinutės nr. 1", "antra žinutė", "žinutė paskutinė" }; /* cia turi buti kodas kuris uzpildytu zinuciu sarasa */
 
                         OutputMessages(messages);
                     }
@@ -79,16 +84,16 @@ namespace ChatClientConsole
         {
             Console.Clear();
 
-            Console.WriteLine(string.Format("Prisijunges vartotojas: {0}", loggedInUser));
+            Console.WriteLine(string.Format("Prisijungęs vartotojas: {0}", loggedInUser));
             Console.WriteLine();
             Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("Galimi veiksmai (paspauskite atitinkama klavisa):");
+            Console.WriteLine("Galimi veiksmai (paspauskite atitinkamą klavišą):");
             Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("1 - siusti zinute");
-            Console.WriteLine("2 - gauti siunteju sarasa");
-            Console.WriteLine("3 - gauti siuntejo zinutes");
+            Console.WriteLine("1 - siųsti žinutę");
+            Console.WriteLine("2 - gauti siuntėjų sąrašą");
+            Console.WriteLine("3 - gauti siuntėjo žinutes");
             Console.WriteLine();
-            Console.WriteLine("ESC - iseiti");
+            Console.WriteLine("ESC - išeiti");
         }
 
         static void InputMessage(out string recipient, out string text)
@@ -96,30 +101,30 @@ namespace ChatClientConsole
             Console.WriteLine();
             Console.WriteLine("------------------------------");
 
-            Console.Write("Iveskite zinutes gavejo varda: ");
+            Console.Write("Įveskite žinutes gavėjo vardą: ");
             recipient = Console.ReadLine().Trim();
 
-            Console.Write("Iveskite zinutes teskta: ");
+            Console.Write("Įveskite žinutės tekstą: ");
             text = Console.ReadLine().Trim();
         }
 
         static void OutputMessageSent()
         {
             Console.WriteLine();
-            Console.WriteLine("Zinute nusiusta!");
+            Console.WriteLine("Žinutė nusiųsta!");
         }
 
         static void OutputMessageNotSent()
         {
             Console.WriteLine();
-            Console.WriteLine("Zinute nusiusti nepavyko!");
+            Console.WriteLine("Žinutės nusiųsti nepavyko!");
         }
 
         static void OutputSenders(string[] senders)
         {
             Console.WriteLine();
             Console.WriteLine("------------------");
-            Console.WriteLine("Zinuciu siuntejai:");
+            Console.WriteLine("Žinučių siuntėjai:");
 
             for (int i = 0; i < senders.Length; i++)
             {
@@ -132,7 +137,7 @@ namespace ChatClientConsole
             Console.WriteLine();
             Console.WriteLine("--------------------------------");
 
-            Console.Write("Iveskite zinutes siuntejo varda: ");
+            Console.Write("Įveskite žinutės siuntėjo vardą: ");
             sender = Console.ReadLine().Trim();
         }
 
