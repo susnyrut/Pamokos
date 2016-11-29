@@ -21,7 +21,7 @@ namespace SyntaxTest
 
         private static bool RunExercises()
         {
-            for (int i = 11; i <= 11; i++)
+            for (int i = 1; i <= 11; i++)
             {
                 bool ok = RunExercise(i);
                 if (!ok)
