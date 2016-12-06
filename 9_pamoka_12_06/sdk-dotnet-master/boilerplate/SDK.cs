@@ -84,6 +84,12 @@ namespace CodeFights
             if ("kickboxer".Equals(args[1], StringComparison.InvariantCultureIgnoreCase))
                 return new Kickboxer();
 
+            if ("simpleguy".Equals(args[1], StringComparison.InvariantCultureIgnoreCase))
+                return new SimpleGuy();
+
+            if ("randomguy".Equals(args[1], StringComparison.InvariantCultureIgnoreCase))
+                return new RandomGuy();
+
             throw new NotSupportedException("unrecognized built-in bot: " + args[1]);
         }
     }
