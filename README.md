@@ -10,7 +10,7 @@
 6. [Objektinis programavimas] (https://github.com/susnyrut/Pamokos/blob/master/6_pamoka_11_15/Klases.pdf)
 7. [Praktinis objektinio programavimo panaudojimas] (https://github.com/susnyrut/Pamokos/blob/master/7_pamoka_11_22/try_catch.pdf)
 8. [Klasės, konstruktoriai, metodai, parametrai, fieldai ir properčiai] (https://docs.google.com/document/d/1myE0BSkrZqAo18jJZONSEVuhicqKClR6fDVE5yOg7CQ/edit?usp=sharing)
-9. [Kaip sukurti CodeFights kovotoją?] (https://docs.google.com/a/visma.com/document/d/1cXraNQRN9C31PwoRK4csztI6TJEWK5lgfpghCWzhXxs/edit?usp=sharing)
+9. [Kaip sukurti CodeFights kovotoją?] (https://docs.google.com/document/d/1Y3b3vVWvrMfUIb4RmRif6JRZrGoz7fDM8qkKPPT3hoA/edit?usp=sharing)
 
 ### Programinė įranga
 
