@@ -90,6 +90,9 @@ namespace CodeFights
             if ("randomguy".Equals(args[1], StringComparison.InvariantCultureIgnoreCase))
                 return new RandomGuy();
 
+            if ("beveikprizininkas".Equals(args[1], StringComparison.InvariantCultureIgnoreCase))
+                return new BeveikPrizininkas();
+
             throw new NotSupportedException("unrecognized built-in bot: " + args[1]);
         }
     }

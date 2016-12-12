@@ -55,6 +55,7 @@
     <Compile Include="MyFighter.cs" />
     <Compile Include="boilerplate\SDK.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="samples\BeveikPrizininkas.cs" />
     <Compile Include="samples\RandomGuy.cs" />
     <Compile Include="samples\SimpleGuy.cs" />
     <Compile Include="samples\Boxer.cs" />
