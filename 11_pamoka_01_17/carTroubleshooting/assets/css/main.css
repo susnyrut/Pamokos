@@ -1,0 +1,25 @@
+html, body {
+	height: 100%;
+	font-size: 20px;
+}
+
+body {
+	background: #A9D1FC;
+}
+
+.container {
+	position: relative;
+	top: 35%;
+	text-align: center;
+}
+
+.wrapper {
+	width: 600px;
+	background: #fff;
+	padding: 40px 20px;
+	margin: 0 auto;
+}
+
+a {
+	margin: 0 20px;
+}
