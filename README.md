@@ -15,9 +15,9 @@
 9. [Kaip sukurti CodeFights kovotoją?] (https://docs.google.com/document/d/1Y3b3vVWvrMfUIb4RmRif6JRZrGoz7fDM8qkKPPT3hoA/edit?usp=sharing)
 10. [CodeFights kovotojo tobulinimas] (https://github.com/susnyrut/Pamokos/blob/master/10_pamoka_12_13/10pamoka.pdf)
 
-##### Antras pusmetis
-
-11. [HTML pagrindai]
+	##### Antras pusmetis
+11. [HTML pagrindai] (https://github.com/susnyrut/Pamokos/tree/master/11_pamoka_01_17)
+11. [Javascript pagrindai] (https://github.com/susnyrut/Pamokos/tree/master/12_pamoka_01_24/Javascriptpagrindai.pdf)
 
 ### Programinė įranga
 

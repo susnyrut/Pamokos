@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://fiddle.jshell.net/35Lpjwbp/1/show/light/ -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+.sample {
+  border: 1px solid #555;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+</style>
+<title></title>
+<script type="text/javascript">//<![CDATA[
+
+//sample 5
+function updateDemo5(){
+	document.getElementById('demo5').innerHTML='This text is updated from file'
+}
+
+//sample 6
+function takeValueFromInput(){
+	var inputValue = document.getElementById("demo6").value;
+  document.getElementById('textFromInput').innerHTML = inputValue;
+}
+
+//sample 7
+function generateRandomNumber(){
+	var randomNumber = Math.round(Math.random()*100);
+  document.getElementById('demo7').innerHTML = randomNumber;
+}
+
+//sample 8
+//write sample 8 function here
+//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <h1>What Can JavaScript Do?</h1>
+
+<!-- 
+SAMPLE 1
+-->
+
+<div class="sample">
+  <h3>SAMPLE 1</h3>
+  <p id="demo">JavaScript can change the style of an HTML element.</p>
+  <button type="button" onclick="document.getElementById(&#39;demo&#39;).style.fontSize=&#39;35px&#39;">Click Me!</button>
+</div>
+
+<!-- 
+SAMPLE 2
+-->
+
+<div class="sample">
+  <h3>SAMPLE 2</h3>
+  <p>JavaScript can hide HTML elements.</p>
+  <p id="demo2">This will be hidden.</p>
+  <button type="button" onclick="document.getElementById(&#39;demo2&#39;).style.display=&#39;none&#39;">Click Me!</button>
+</div>
+
+<!-- 
+SAMPLE 3
+-->
+
+<div class="sample">
+  <h3>SAMPLE 3</h3>
+  <p>JavaScript can show hidden HTML elements.</p>
+  <p id="demo3" style="display:none">Hello JavaScript!</p>
+  <button type="button" onclick="document.getElementById(&#39;demo3&#39;).style.display=&#39;block&#39;">Click Me!</button>
+</div>
+
+<!-- 
+SAMPLE 4
+-->
+
+<div class="sample">
+  <h3>SAMPLE 4</h3>
+  <p>JavaScript can change text in an element.</p>
+  <p id="demo4">Hello JavaScript!</p>
+  <button type="button" onclick="document.getElementById(&#39;demo4&#39;).innerHTML=&#39;Yo mamma&#39;">Click Me!</button>
+</div>
+
+<!-- 
+SAMPLE 5
+-->
+
+<div class="sample">
+  <h3>SAMPLE 5</h3>
+  <p>JavaScript can call function from javascript file.</p>
+  <p id="demo5">Hello JavaScript!</p>
+  <button type="button" onclick="updateDemo5()">Click Me!</button>
+</div>
+
+<!-- 
+SAMPLE 6
+-->
+
+<div class="sample">
+  <h3>SAMPLE 6</h3>
+  <p>JavaScript can take value from input.</p>
+  <input id="demo6" value="some text">
+  <div id="textFromInput">no value yet</div>
+  <button type="button" onclick="takeValueFromInput()">Click Me!</button>
+</div>
+
+<!-- 
+SAMPLE 7
+-->
+
+<div class="sample">
+  <h3>SAMPLE 7</h3>
+  <p>Generate random number.</p>
+  <div id="demo7"></div>
+  <button type="button" onclick="generateRandomNumber()">Click Me!</button>
+</div>
+
+<!-- 
+SAMPLE 8
+Google "javascript change input value"
+-->
+
+<div class="sample">
+  <h3>SAMPLE 8</h3>
+  <p>Change input value.</p>
+  <input id="demo8" value="some text">
+  <button type="button">Click Me!</button>
+</div>
+
+</body></html>
