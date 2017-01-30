@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Eksperimentai su api</title>
+      <style>
+         #map {
+            width : 500px;
+            height : 500px;
+         }
+      </style>
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCR_tqidHI72XY8dZ9bFslidkgvhdJ3Ep8"></script>
+      <script type="text/javascript">google.load("maps","3.x");</script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+            var map = new google.maps.Map($("#map")[0]);
+            var places = [
+               {
+                  title : "Stotis",
+                  coords : {
+                     lat : 54.670260,
+                     lng : 25.284363
+                  }
+               },
+               {
+                  title : "Visma ofisas",
+                  coords : {
+                     lat : 54.696793,
+                     lng : 25.278572
+                  }
+               },
+               {
+                  title : "Birziskos gimnazija",
+                  coords : {
+                     lat : 54.723439,
+                     lng : 25.215947
+                  }
+               }
+            ]
+
+            map.setZoom(12);
+            map.setCenter(places[0].coords);
+
+            for (var i = 0; i < places.length; i++) { 
+               var marker = new google.maps.Marker({
+                  title : places[i].title,
+                  position : places[i].coords,
+                  map : map
+               });
+
+               marker.addListener('click', function() {
+                  map.panTo(this.getPosition());
+               });
+
+               $("#places").append(
+                  $("<li>", {
+                     id : "index" + i,
+                     class : "mapLink",
+                     text : places[i].title
+                  })
+                  .css('cursor', 'pointer')
+                  .css('cursor', 'hand')
+               );
+            }
+
+            $("li.mapLink").bind('click', function() {
+               var index = parseInt(this.id.replace("index", ""));
+
+               map.panTo(places[index].coords);
+            });
+         });
+      </script>
+   </head>
+   <body>
+      <ul id="places"></ul>
+      <div id="map" />
+   </body>
+</html>
