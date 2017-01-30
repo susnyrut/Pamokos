@@ -49,26 +49,23 @@
                   map : map
                });
 
-               marker.addListener('click', function() {
-                  map.panTo(this.getPosition());
-               });
+               marker.addListener('click', clickHandler(i));
 
                $("#places").append(
                   $("<li>", {
-                     id : "index" + i,
-                     class : "mapLink",
                      text : places[i].title
                   })
                   .css('cursor', 'pointer')
                   .css('cursor', 'hand')
+                  .click(clickHandler(i))
                );
             }
 
-            $("li.mapLink").bind('click', function() {
-               var index = parseInt(this.id.replace("index", ""));
-
-               map.panTo(places[index].coords);
-            });
+            function clickHandler(index) {
+               return function() {
+                  map.panTo(places[index].coords);
+               }
+            }
          });
       </script>
    </head>
