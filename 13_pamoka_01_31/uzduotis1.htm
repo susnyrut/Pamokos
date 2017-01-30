@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Eksperimentai su api</title>
+      <style>
+         #map {
+            width : 500px;
+            height : 500px;
+         }
+      </style>
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCR_tqidHI72XY8dZ9bFslidkgvhdJ3Ep8"></script>
+      <script type="text/javascript">google.load("maps","3.x");</script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+            var map = new google.maps.Map($("#map")[0]);
+
+            map.setZoom(12);
+            map.setCenter({ lat : 54.670260, lng : 25.284363 });
+         });
+      </script>
+   </head>
+   <body>
+      <div id="map" />
+   </body>
+</html>
