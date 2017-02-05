@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Eksperimentai su api</title>
+      <style>
+         #map {
+            width : 500px;
+            height : 500px;
+         }
+      </style>
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCR_tqidHI72XY8dZ9bFslidkgvhdJ3Ep8"></script>
+      <script type="text/javascript">google.load("maps","3.x");</script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+           
+			
+			function mapInit(){
+			 var map = new google.maps.Map($("#map")[0]);
+            var places = [
+               {
+                  title : "Stotis",
+                  coords : {
+                     lat : 54.670260,
+                     lng : 25.284363
+                  }
+               },
+               {
+                  title : "Visma ofisas",
+                  coords : {
+                     lat : 54.696793,
+                     lng : 25.278572
+                  }
+               },
+               {
+                  title : "Birziskos gimnazija",
+                  coords : {
+                     lat : 54.723439,
+                     lng : 25.215947
+                  }
+               }
+            ]
+            map.setZoom(12);
+            map.setCenter(places[0].coords);
+            for (var i = 0; i < places.length; i++) { 
+               var marker = new google.maps.Marker({
+                  title : places[i].title,
+                  position : places[i].coords,
+                  map : map
+               });
+               marker.addListener('click', clickHandler(i));
+               $("#places").append(
+                  $("<li>", {
+                     text : places[i].title
+                  })
+                  .css('cursor', 'pointer')
+                  .css('cursor', 'hand')
+                  .click(clickHandler(i))
+               );
+            }
+            function clickHandler(index) {
+               return function() {
+                  map.panTo(places[index].coords);
+               }
+            }
+			}
+			
+			function solveTask1(){
+				
+				var addressParams = ["Šventaragio", "gatvė", "Vilnius", "Katedra"]; // Listing search parameters in an array
+				var addressSearchString = addressParams.join("+"); // Creating the search string as defined by Google.
+				var apiKey = 'AIzaSyCakLX6cS6IF12R2tF_--5JBJLxrd0csvw'; // Our API key
+				var url = 'https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_key}'; // Format of the request URL
+				
+				url = url.replace('{address}', addressSearchString); // Inserting the search string into our URL
+				url = url.replace('{API_key}', apiKey); // Inserting our API key into the URL
+				
+				// Making a server call to Google.
+				$.ajax({
+                    url: url, // Defines the address we are requesting. The results can be viewed on browser by entering the URL in the browser's address input. 
+                    cache: false, // Forcing the result to be fetched from Google every time we make a call. Without this The results of the first call would always be returned from Google. If Google would update the information about the location we are requesting, we would not see the newest results.
+                    success: function(resultObj){ // Defines what happens once a call is made to Google. In our case we extract the longitude and altitude parameters for future use.
+						var addressLocation = resultObj.results[0].geometry.location;
+						
+						var longitude  = addressLocation.lng;
+						var latitude = addressLocation.lat;
+					}                    
+                });
+			}
+			
+			mapInit();
+			solveTask1(); // Calling the function that solves the first task.
+         });
+      </script>
+   </head>
+   <body>
+      <ul id="places"></ul>
+      <div id="map" />
+   </body>
+</html>
