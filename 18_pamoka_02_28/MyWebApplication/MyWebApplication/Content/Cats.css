@@ -1,0 +1,8 @@
+﻿#CatsTable{
+    width: 100%;
+}
+
+#CatsTable img{
+    max-height: 150px;
+    max-width: 150px;
+}

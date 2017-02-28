@@ -43,6 +43,9 @@ bld/
 # Visual Studio 2015 cache/options directory
 .vs/
 
+packages/
+!packages/repositories.config
+
 # User-specific files
 *.suo
 *.user
